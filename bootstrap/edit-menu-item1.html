@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+<title>Cart</title>
+</head>
+<body>
+<div class="one">
+<img src="images1\logo.jpg" id="image1">
+<nav><a id="menulink" href="menu-item-list-admin1.html">Menu</a></nav>
+</div>
+
+<form name="myForm" action="edit-menu-item-status1.html" onsubmit="return validateForm()" method="post">
+<table>
+<tr><td><h3>Edit Menu Item</h3></td></tr>
+  <tr>
+    <th>Name</th>
+</tr>
+
+<td><input type="text" name="fname"></td>
+  </tr>
+ 
+<div class="form-group">
+  <tr>
+    <td><label for="name"><Strong>Price(Rs.)</Strong></label></td>
+<td><label for="Active"><Strong>Active</Strong></label></td>
+    <td><label for="date"><Strong>Date of Launch</Strong></label></td>
+    <td><label for="category"><Strong>Category</Strong></label></td>
+  </tr>
+  <tr>
+    <td><input type="text" id="" name="price"></td>
+<td>
+<input type="radio" id="male" name="gender" value="male">
+<label for="yes">Yes</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="no">No</label>
+</td>
+    <td><input type="date" id="date"></td>
+    <td><select id="cat" name="cate" required>
+  <option>Starters</option>
+  <option>Main Course</option>
+  <option>Desserts</option>
+  <option>Drinks</option></select></td>
+  </tr>
+</div>
+<div class="form-group">
+<tr><td><input type="checkbox" id="delivery" name="delivery" value="">
+  <label for="delivery"> Free Delivery</label><br><br> </td></tr></div>
+<tr><td>
+<input type="submit" value="Save" style="background-color: rgb(49,84,150); border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"><br><br></td></tr></table>
+
+</form>
+<div class="footer">
+  <p>Copyright &copy 2019</p>
+</div>
+</body>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+var x = document.forms["myForm"]["price"].value;
+  if (x == "") {
+    alert("price must be filled out");
+    return false;
+  }
+}
+</script>
+</html>
